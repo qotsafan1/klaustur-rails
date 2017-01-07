@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
     root to: 'index#index'
+    get 'signup', to: 'index#signup'
+    get 'results', to: 'index#results'    
     resources :laptimes
     resources :competitors
     resources :groups

@@ -20,5 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  home:
-    title: "HOME"
+  nav:
+    news: "NEWS"
+    registration: "REGISTRATION"
+    results: "RESULTS"
+    visitor: "VISITOR INFO"

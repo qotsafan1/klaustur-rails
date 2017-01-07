@@ -20,5 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 is:
-  home:
-    title: "KEPPNIN"
+  nav:
+    news: "FRÉTTIR"
+    registration: "SKRÁNING"
+    results: "ÚRSLIT"
+    visitor: "ÁHORFENDUR"

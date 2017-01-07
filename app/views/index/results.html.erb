@@ -1,2 +1,44 @@
-<h1>Index#results</h1>
-<p>Find me in app/views/index/results.html.erb</p>
+<div class="container signup">
+  <div class="row">
+    <%= select_tag 'groups', options_for_select(@groups.collect{ |u| [u.name, u.name] }) %>
+    <div class="row">
+			<div class="col-xs-1"></div>
+        <div class="col-xs-1" style="padding-left: 0"><b>Sæti</b></div>
+        <div class="col-xs-7"><b>Keppendur</b></div>
+        <div class="col-xs-1"><b>Hringir</b></div>
+		</div>
+    <%
+      counter = 1;
+      @competitors.each do |competitor|
+    %>
+      <div class="row closed-div" data-result-id="<%= competitor.id %>" data-group="<%= competitor.group.name %>">
+        <div class="row">
+          <div class="col-xs-1"></div>
+          <div class="col-xs-1 counting-place"><%= counter %></div>
+          <div class="col-xs-7"><%= competitor.name %></div>
+          <div class="col-xs-1"><%= competitor.laps %></div>
+        </div>
+        <div class="div-laptimes col-lg-12">
+          <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-8"><b>Flokkur: </b><%= competitor.group.name %></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-8"><b>Heildartími: </b><%= competitor.total_time %></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <% competitor.laptimes.each do |lap| %>
+              <div class="col-xs-3"><b><%= lap.lap_number %>.</b> <%= lap.laptime %></div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <%
+      counter = counter + 1
+      end
+    %>
+  </div>
+</div>
