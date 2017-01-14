@@ -6446,3 +6446,897 @@ Processing by IndexController#results as HTML
 Completed 200 OK in 61ms (Views: 57.2ms | ActiveRecord: 1.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-01-14 12:42:55 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/sigurbjorn/Documents/klaustur-rails/app/controllers/application_controller.rb:3)
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 8738ms (Views: 8722.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-01-14 12:43:39 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 83ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-01-14 12:44:02 +0000
+Processing by IndexController#results as HTML
+  Rendering index/results.html.erb within layouts/application
+  [1m[36mGroup Load (2.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mCompetitor Load (1.6ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_index_results_html_erb___1297403856100513390_70173791407020 at /home/sigurbjorn/Documents/klaustur-rails/app/views/index/results.html.erb:12)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_index_results_html_erb___1297403856100513390_70173791407020 at /home/sigurbjorn/Documents/klaustur-rails/app/views/index/results.html.erb:12)
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (2.1ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 1]]
+  [1m[36mGroup Load (2.5ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 2]]
+  Rendered index/results.html.erb within layouts/application (82.8ms)
+Completed 200 OK in 151ms (Views: 116.5ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-01-14 12:57:22 +0000
+Processing by IndexController#results as HTML
+  Rendering index/results.html.erb within layouts/application
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mCompetitor Load (0.6ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  [1m[36mGroup Load (11.7ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (1.0ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 1]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 2]]
+  Rendered index/results.html.erb within layouts/application (27.6ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 14.6ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "  display flex": expected "{", was ";"):
+    4:     <title>Klaustur</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:35
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2806323171415574723_70173783799780'
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.9ms)
+Started GET "/results" for 127.0.0.1 at 2017-01-14 12:57:50 +0000
+Processing by IndexController#results as HTML
+  Rendering index/results.html.erb within layouts/application
+  [1m[36mGroup Load (2.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mCompetitor Load (0.7ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 1]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 2]]
+  Rendered index/results.html.erb within layouts/application (14.8ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 4.3ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...irection column": expected "{", was ";"):
+    4:     <title>Klaustur</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:40
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2806323171415574723_70173791481740'
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.7ms)
+Started GET "/results" for 127.0.0.1 at 2017-01-14 12:58:27 +0000
+Processing by IndexController#results as HTML
+  Rendering index/results.html.erb within layouts/application
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mCompetitor Load (2.5ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 1]]
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 2]]
+  Rendered index/results.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 2913ms (Views: 2903.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-01-14 12:59:44 +0000
+Processing by IndexController#results as HTML
+  Rendering index/results.html.erb within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mCompetitor Load (0.4ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 1]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 2]]
+  Rendered index/results.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-01-14 13:08:45 +0000
+Processing by IndexController#results as HTML
+  Rendering index/results.html.erb within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mCompetitor Load (0.3ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 1]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.5ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 2]]
+  Rendered index/results.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 68ms (Views: 63.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-01-14 13:10:06 +0000
+Processing by IndexController#results as HTML
+  Rendering index/results.html.erb within layouts/application
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mCompetitor Load (0.8ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 1]]
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 2]]
+  Rendered index/results.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 89ms (Views: 84.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-01-14 13:10:43 +0000
+Processing by IndexController#results as HTML
+  Rendering index/results.html.erb within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mCompetitor Load (0.4ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  [1m[36mGroup Load (2.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 2]]
+  Rendered index/results.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 163ms (Views: 158.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-01-14 13:13:39 +0000
+Processing by IndexController#results as HTML
+  Rendering index/results.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mCompetitor Load (0.8ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 1]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 2]]
+  Rendered index/results.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 72ms (Views: 67.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-01-14 13:16:02 +0000
+Processing by IndexController#results as HTML
+  Rendering index/results.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mCompetitor Load (0.8ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.5ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 1]]
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 2]]
+  Rendered index/results.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 89ms (Views: 84.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-01-14 13:18:27 +0000
+Processing by IndexController#results as HTML
+  Rendering index/results.html.erb within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mCompetitor Load (0.4ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.5ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 1]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.6ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 2]]
+  Rendered index/results.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 100ms (Views: 93.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-01-14 13:19:04 +0000
+Processing by IndexController#results as HTML
+  Rendering index/results.html.erb within layouts/application
+  [1m[36mGroup Load (1.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mCompetitor Load (0.6ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (1.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 1]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 2]]
+  Rendered index/results.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 63ms (Views: 57.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-01-14 13:20:42 +0000
+Processing by IndexController#results as HTML
+  Rendering index/results.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mCompetitor Load (0.2ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 2]]
+  Rendered index/results.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 2500ms (Views: 2497.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-01-14 13:27:34 +0000
+Processing by IndexController#results as HTML
+  Rendering index/results.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mCompetitor Load (3.3ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 2]]
+  Rendered index/results.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 60ms (Views: 53.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 13:32:52 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 13:33:44 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 13:36:47 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2608ms (Views: 2606.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 13:37:11 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3017ms (Views: 3015.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 13:37:55 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2181ms (Views: 2179.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 13:38:12 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2347ms (Views: 2343.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 13:38:21 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2554ms (Views: 2552.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 13:38:31 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2480ms (Views: 2478.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 13:39:21 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 13:41:30 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 13:42:58 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 13:44:37 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 13:47:44 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 90ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 13:48:17 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 45ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-01-14 13:48:31 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 77ms (Views: 75.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-01-14 13:49:45 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 13:49:54 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 74ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 13:54:23 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 83ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 13:54:59 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2296ms (Views: 2294.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 13:55:13 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2871ms (Views: 2869.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 13:58:58 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:00:30 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/sigurbjorn/Documents/klaustur-rails/app/views/layouts/application.html.erb:15: syntax error, unexpected '='
+...I18n.t "nav.news"), "/", class="sections"));@output_buffer.s...
+...                               ^
+/home/sigurbjorn/Documents/klaustur-rails/app/views/layouts/application.html.erb:15: syntax error, unexpected ')', expecting keyword_end
+...news"), "/", class="sections"));@output_buffer.safe_append='...
+...                               ^):
+  
+app/views/layouts/application.html.erb:15: syntax error, unexpected '='
+app/views/layouts/application.html.erb:15: syntax error, unexpected ')', expecting keyword_end
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.2ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.8ms)
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:00:56 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:02:06 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:03:00 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:03:52 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:04:58 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:05:26 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:06:34 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 52ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:07:06 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:07:19 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:08:30 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:09:48 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2374ms (Views: 2372.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-01-14 14:10:01 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:10:03 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 45ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-01-14 14:10:04 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:10:05 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-01-14 14:10:05 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:10:06 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-01-14 14:10:07 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:10:07 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 46ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-01-14 14:10:08 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 73ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:10:09 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-01-14 14:10:09 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:10:10 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-01-14 14:10:11 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 72ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/is" for 127.0.0.1 at 2017-01-14 14:10:12 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"locale"=>"is"}
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-01-14 14:11:22 +0000
+Processing by IndexController#results as HTML
+  Rendering index/results.html.erb within layouts/application
+  [1m[36mGroup Load (10.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mCompetitor Load (0.5ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  [1m[36mGroup Load (6.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 1]]
+  [1m[36mGroup Load (4.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 2]]
+  Rendered index/results.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 82ms (Views: 58.2ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-01-14 14:11:53 +0000
+Processing by IndexController#signup as HTML
+  Rendering index/signup.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered index/signup.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 54ms (Views: 48.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-01-14 14:14:38 +0000
+Processing by IndexController#signup as HTML
+  Rendering index/signup.html.erb within layouts/application
+  [1m[36mGroup Load (4.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered index/signup.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 3087ms (Views: 3081.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-01-14 14:15:32 +0000
+Processing by IndexController#signup as HTML
+  Rendering index/signup.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered index/signup.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3269ms (Views: 3267.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:16:27 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:25:16 +0000
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/sigurbjorn/Documents/klaustur-rails/app/controllers/application_controller.rb:3)
+Processing by IndexController#index as HTML
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `time' for #<IndexController:0x007fa5363034b8>
+Did you mean?  timeout):
+  
+app/controllers/index_controller.rb:3:in `index'
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (117.7ms)
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:25:57 +0000
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/sigurbjorn/Documents/klaustur-rails/app/controllers/application_controller.rb:3)
+Processing by IndexController#index as HTML
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `time' for #<IndexController:0x007fa536389860>
+Did you mean?  timeout):
+  
+app/controllers/index_controller.rb:4:in `index'
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.7ms)
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:30:12 +0000
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/sigurbjorn/Documents/klaustur-rails/app/controllers/application_controller.rb:3)
+Processing by IndexController#index as HTML
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `time' for #<IndexController:0x007fa515a08f40>
+Did you mean?  timeout):
+  
+app/controllers/index_controller.rb:4:in `index'
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.3ms)
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:30:40 +0000
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/sigurbjorn/Documents/klaustur-rails/app/controllers/application_controller.rb:3)
+Processing by IndexController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `min' for 11482159.139280465:Float):
+  
+app/controllers/index_controller.rb:8:in `index'
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.3ms)
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:31:26 +0000
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/sigurbjorn/Documents/klaustur-rails/app/controllers/application_controller.rb:3)
+Processing by IndexController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `min' for 11482113.538468773:Float):
+  
+app/controllers/index_controller.rb:8:in `index'
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.2ms)
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:31:38 +0000
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/sigurbjorn/Documents/klaustur-rails/app/controllers/application_controller.rb:3)
+Processing by IndexController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `sec' for 11482101.951645045:Float
+Did you mean?  send):
+  
+app/controllers/index_controller.rb:9:in `index'
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.7ms)
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:31:46 +0000
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/sigurbjorn/Documents/klaustur-rails/app/controllers/application_controller.rb:3)
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 82ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:32:29 +0000
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/sigurbjorn/Documents/klaustur-rails/app/controllers/application_controller.rb:3)
+Processing by IndexController#index as HTML
+Completed 500 Internal Server Error in 322ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `buebug' for #<IndexController:0x007fa514493458>
+Did you mean?  byebug):
+  
+app/controllers/index_controller.rb:3:in `index'
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/sigurbjorn/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.1ms)
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:32:47 +0000
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/sigurbjorn/Documents/klaustur-rails/app/controllers/application_controller.rb:3)
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21354ms (Views: 107.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:33:34 +0000
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/sigurbjorn/Documents/klaustur-rails/app/controllers/application_controller.rb:3)
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 180413ms (Views: 115.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:40:58 +0000
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/sigurbjorn/Documents/klaustur-rails/app/controllers/application_controller.rb:3)
+Processing by IndexController#index as HTML
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:53:51 +0000
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 772569ms (Views: 146.6ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/sigurbjorn/Documents/klaustur-rails/app/controllers/application_controller.rb:3)
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:55:12 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:55:27 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:55:31 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:55:36 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-14 14:56:01 +0000
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/sigurbjorn/Documents/klaustur-rails/app/controllers/application_controller.rb:3)
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
