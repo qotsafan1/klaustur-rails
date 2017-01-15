@@ -1,8 +1,9 @@
 
-$(function () {
-	initializeClock('registrationClock', raceDeadline);
-	//initializeClock('raceClock', raceDeadline);
-});
+$(document).on('turbolinks:load', function() {
+	if ($('#registrationClock').length) {
+		initializeClock('registrationClock', raceDeadline);
+	}
+})
 
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());

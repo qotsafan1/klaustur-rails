@@ -16,30 +16,24 @@ ActiveRecord::Schema.define(version: 20170104185727) do
   enable_extension "plpgsql"
 
   create_table "competitors", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "group_id"
-    t.integer  "laps"
-    t.time     "total_time"
-    t.time     "finish_time"
-    t.integer  "place_in_group"
-    t.integer  "year"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.integer "group_id"
+    t.string  "name"
+    t.integer "laps"
+    t.time    "total_time"
+    t.time    "finish_time"
+    t.integer "place_in_group"
+    t.integer "year"
     t.index ["group_id"], name: "index_competitors_on_group_id", using: :btree
   end
 
   create_table "groups", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "name"
   end
 
   create_table "laptimes", force: :cascade do |t|
-    t.integer  "competitor_id"
-    t.integer  "lap_number"
-    t.text     "laptime"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.integer "competitor_id"
+    t.integer "lap_number"
+    t.text    "laptime"
     t.index ["competitor_id"], name: "index_laptimes_on_competitor_id", using: :btree
   end
 

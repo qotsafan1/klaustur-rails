@@ -5,7 +5,6 @@ class CreateLaptimes < ActiveRecord::Migration[5.0]
       t.integer :lap_number
       t.text :laptime
 
-      t.timestamps
     end
   end
 end

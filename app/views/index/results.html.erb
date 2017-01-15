@@ -1,29 +1,28 @@
-<div class="container results">
-  <%= select_tag 'groups', options_for_select(@groups.collect{ |u| [u.name, u.name] }) %>
+<div class="results">
+  <%= select_tag 'groups', options_for_select(@groups.collect{ |u| [u.name, u.name] }), :prompt => "Allir flokkar" %>
   <div class="flex-child-row">
-    <div class="flex-item-1"><b>Sæti</b></div>
-    <div class="flex-item-3"><b>Keppendur</b></div>
-    <div class="flex-item-3"><b>Flokkur</b></div>
-    <div class="flex-item-3"><b>Heildartími</b></div>
-    <div class="flex-item-3"><b>Hringir</b></div>
+    <div class="flex-item-1  flex-child-column flex-align-center"><b>Sæti</b></div>
+    <div class="flex-item-5"><b>Keppendur</b></div>
+    <div class="flex-item-4 flex-child-column flex-align-center"><b>Flokkur</b></div>
+    <div class="flex-item-4 flex-child-column flex-align-center"><b>Heildartími</b></div>
+    <div class="flex-item-1 flex-child-column flex-align-center"><b>Hringir</b></div>
   </div>
 
-  <div class="flex-child-column">
+  <div class="flex-child-column flex-justify-center">
     <%
       counter = 1;
       @competitors.each do |competitor|
     %>
-      <div class="flex-1 flex-child-column closed-div" data-result-id="<%= competitor.id %>" data-group="<%= competitor.group.name %>">
+      <div class="flex-item-1 flex-child-column competitor" data-result-id="<%= competitor.id %>" data-group="<%= competitor.group.name %>">
         <div class="flex-item-1 flex-child-row">
-          <div class="flex-item-1 counting-place"><%= counter %></div>
-          <div class="flex-item-3"><%= competitor.name %></div>
-          <div class="flex-item-3"><%= competitor.group.name %></div>
-          <div class="flex-item-3"><%= competitor.total_time.strftime("%H:%M:%S") %></div>
-          <div class="flex-item-3"><%= competitor.laps %></div>
+          <div class="flex-item-1 flex-child-column flex-align-center counting-place"><%= counter %></div>
+          <div class="flex-item-5"><%= competitor.name %></div>
+          <div class="flex-item-4 flex-child-column flex-align-center"><%= competitor.group.name %></div>
+          <div class="flex-item-4 flex-child-column flex-align-center"><%= competitor.total_time.strftime("%H:%M:%S") %></div>
+          <div class="flex-item-1 flex-child-column flex-align-center"><%= competitor.laps %></div>
         </div>
 
-
-        <div class="flex-item-1 flex-child-row">
+        <div class="flex-item-1 flex-child-column laptimes" style="display:none">
           <% competitor.laptimes.each do |lap| %>
             <div class="flex-item-1"><b><%= lap.lap_number %>.</b> <%= lap.laptime %></div>
           <% end %>
@@ -35,3 +34,30 @@
     %>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(function() {
+    $('.competitor').on('click', function() {
+      var laptimesDiv = $(this).find('.laptimes');
+      if ( laptimesDiv.is(":visible")){
+        laptimesDiv.toggle('fast');
+      } else {
+        laptimesDiv.toggle('fast');
+      }
+    });
+
+    $('#groups').on('change', function() {
+      var selectedValue = $(this).val();
+      var counter = 1;
+      $('.competitor').each(function() {
+        if ($(this).attr('data-group') === selectedValue || selectedValue === '') {
+          $(this).show();
+          $(this).find('.counting-place').text(counter);
+          counter++;
+        } else {
+          $(this).hide();
+        }
+      });
+    });
+  });
+</script>

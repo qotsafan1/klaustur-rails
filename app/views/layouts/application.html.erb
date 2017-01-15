@@ -43,31 +43,15 @@
     <div class="main">
       <%= yield %>
     </div>
-    <div id="samstarfsadilar">
-      <div class="container ">
-          <div class="row">
-              <div class="col-md-12">
-                  <h1 class="maker-label">Samstarfsaðilar</h1>
-              </div>
-          </div>
-          <br>
-          <div class="row">
-              <div class="col-md-2 col-md-offset-1 text-center">
-                  <%= link_to image_tag("makers/vik.gif", class: "maker"), "http://www.motocross.is", target: "_blank" %>
-              </div>
-              <div class="col-md-2 text-center">
-                  <%= link_to image_tag("makers/msi-hvit.JPG", class: "maker"), "http://www.msisport.is", target: "_blank" %>
-              </div>
-              <div class="col-md-2 text-center">
-                  <%= link_to image_tag("makers/kfc.png", class: "maker"), "http://www.kfc.is", target: "_blank" %>
-              </div>
-              <div class="col-md-2 text-center">
-                  <%= link_to image_tag("makers/snaeland.jpg", class: "maker"), "http://www.snaelandvideo.is", target: "_blank" %>
-              </div>
-              <div class="col-md-2 text-center">
-                  <%= link_to image_tag("makers/systrakaffi.png", class: "maker"), "http://www.systrakaffi.is", target: "_blank" %>
-              </div>
-          </div>
+    <div id="samstarfsadilar" class="flex-child-column">
+      <h1 class="maker-label flex-item-1">Samstarfsaðilar</h1>
+      <br>
+      <div class="flex-item-1 flex-child-row">
+        <%= link_to image_tag("makers/vik.gif", class: "maker"), "http://www.motocross.is", target: "_blank", class: "flex-item-1 flex-child-row flex-justify-center flex-align-center" %>
+        <%= link_to image_tag("makers/msi-hvit.JPG", class: "maker"), "http://www.msisport.is", target: "_blank", class: "flex-item-1 flex-child-row flex-justify-center flex-align-center" %>
+        <%= link_to image_tag("makers/kfc.png", class: "maker"), "http://www.kfc.is", target: "_blank", class: "flex-item-1 flex-child-row flex-justify-center flex-align-center" %>
+        <%= link_to image_tag("makers/snaeland.jpg", class: "maker"), "http://www.snaelandvideo.is", target: "_blank", class: "flex-item-1 flex-child-row flex-justify-center flex-align-center" %>
+        <%= link_to image_tag("makers/systrakaffi.png", class: "maker"), "http://www.systrakaffi.is", target: "_blank", class: "flex-item-1 flex-child-row flex-justify-center flex-align-center" %>
       </div>
     </div>
   </body>

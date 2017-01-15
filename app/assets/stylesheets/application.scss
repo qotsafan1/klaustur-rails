@@ -41,8 +41,14 @@ body {
 .flex-align-center {
   align-items: center;
 }
+.flex-align-end {
+  align-items: flex-end;
+}
 .flex-justify-center {
   justify-content: center;
+}
+.flex-align-self-center {
+  align-self: center;
 }
 .flex-item-1 {
   flex: 1;
@@ -77,38 +83,11 @@ body {
   }
 }
 
-.main {
-  padding-top: 0px;
-}
-
-.languages {
-  color: white;
-  padding-left: 15px;
-  a {
-    color:white;
-    line-height: 20px;
-  }
-}
-
-.instagram
-{
-   background-color: white;
-}
-
 .logo
 {
    max-width:140px;
    float:left;
 }
-
-.topNav
-{
-   background-color: #505050;
-   border-style: none;
-   margin-bottom: 200px
-}
-
-
 
 hr {
    max-width: 50px;
@@ -136,12 +115,15 @@ div.countdown
 div#samstarfsadilar
 {
    background-color: #505050;
+   h1 {
+     padding-left: 10px;
+   }
 }
 
-img.maker
-{
-max-width: 120px;
-margin-bottom: 20px;
+.maker {
+  max-width: 120px;
+  margin-bottom: 20px;
+  flex:1;
 }
 
 .signup {
@@ -149,5 +131,37 @@ margin-bottom: 20px;
 }
 
 .results {
-  padding-top: 40px;
+  padding: 40px 20px 40px 20px;
+}
+
+#registrationClock {
+  color:white;
+  h1 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid red;
+  }
+  h4 {
+    padding-top: 20px;
+  }
+}
+
+h2 {
+  color:white;
+}
+
+.competitor {
+  font-size: 20px;
+  background-color: #505050;
+  color: white;
+  margin: 0.5px;
+  padding: 5px;
+  .laptimes {
+    background-color: white;
+    color: black;
+    padding: 5px 15px 15px 50px;
+  }
+}
+
+.hidden {
+  display: none;
 }
