@@ -32128,3 +32128,420 @@ Processing by IndexController#results as HTML
 Completed 200 OK in 593ms (Views: 518.1ms | ActiveRecord: 73.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-01-17 19:39:43 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/sigurbjorn/Documents/klaustur-rails/app/controllers/application_controller.rb:3)
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 8101ms (Views: 8080.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-01-17 19:40:07 +0000
+Processing by IndexController#results as HTML
+  Rendering index/results.html.erb within layouts/application
+  [1m[36mGroup Load (2.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mCompetitor Load (2.7ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_index_results_html_erb__2421338910689975518_70086726302460 at /home/sigurbjorn/Documents/klaustur-rails/app/views/index/results.html.erb:14)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_index_results_html_erb__2421338910689975518_70086726302460 at /home/sigurbjorn/Documents/klaustur-rails/app/views/index/results.html.erb:14)
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (4.1ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 1]]
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.7ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 2]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.7ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 7]]
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.5ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 9]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 10]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.5ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.5ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.5ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 18]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 19]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.7ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 20]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 21]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLaptime Load (1.9ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 22]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 24]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.6ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 25]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 26]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 27]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.7ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mLaptime Load (21.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 29]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 30]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 31]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 34]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.7ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 35]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.5ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 36]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (1.0ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 37]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 38]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 39]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 40]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 41]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 42]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 44]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.5ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 45]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 46]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 47]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.8ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 48]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 50]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 51]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.5ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 52]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 53]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 54]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 55]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 56]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 57]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.6ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 58]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.6ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 59]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.6ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 60]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 61]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 62]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (21.9ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 63]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 64]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 65]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 66]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 67]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 68]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 69]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.7ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 70]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 71]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 72]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 73]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 74]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 75]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.5ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 76]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 77]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (1.0ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 78]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.5ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 79]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.4ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 80]]
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 81]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 82]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mLaptime Load (1.1ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 83]]
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 84]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 85]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 86]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 87]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (13.5ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 88]]
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 89]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 90]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.1ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 91]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.1ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 92]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 93]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 94]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.7ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 95]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 96]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 97]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 98]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 99]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 100]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 101]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 102]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 103]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.1ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 104]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 105]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 106]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.6ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 107]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 108]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.1ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 109]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.6ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 110]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 111]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 112]]
+  [1m[36mGroup Load (3.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.3ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 113]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 114]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 115]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLaptime Load (0.2ms)[0m  [1m[34mSELECT "laptimes".* FROM "laptimes" WHERE "laptimes"."competitor_id" = $1[0m  [["competitor_id", 116]]
+  Rendered index/results.html.erb within layouts/application (953.2ms)
+Completed 200 OK in 1017ms (Views: 856.9ms | ActiveRecord: 136.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 19:41:06 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-01-17 19:41:08 +0000
+Processing by IndexController#signup as HTML
+  Rendering index/signup.html.erb within layouts/application
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered index/signup.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 40ms (Views: 36.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 19:41:13 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 19:45:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/sigurbjorn/Documents/klaustur-rails/app/controllers/application_controller.rb:3)
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 603ms (Views: 593.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 19:46:29 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 101ms (Views: 96.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 19:47:17 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 74ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 19:48:04 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 19:49:04 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 19:50:04 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 103ms (Views: 100.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 19:51:44 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2302ms (Views: 2298.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 19:52:20 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2661ms (Views: 2658.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 19:53:54 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2785ms (Views: 2770.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 19:54:07 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 58ms (Views: 55.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 19:57:50 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 50ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 20:02:42 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3010ms (Views: 3007.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 20:03:03 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2726ms (Views: 2723.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 20:03:22 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2876ms (Views: 2873.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 20:04:26 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2827ms (Views: 2824.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 20:04:45 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2443ms (Views: 2441.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-17 20:04:58 +0000
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2714ms (Views: 2713.1ms | ActiveRecord: 0.0ms)
+
+

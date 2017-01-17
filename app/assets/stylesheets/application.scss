@@ -50,6 +50,9 @@ body {
 .flex-align-self-center {
   align-self: center;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
 .flex-item-1 {
   flex: 1;
 }
@@ -136,6 +139,7 @@ div#samstarfsadilar
 
 #registrationClock {
   color:white;
+  margin-bottom: 40vh;
   h1 {
     padding-bottom: 20px;
     border-bottom: 1px solid red;
@@ -164,4 +168,8 @@ h2 {
 
 .hidden {
   display: none;
+}
+
+.video-section {
+  margin-top: 100vh;
 }
