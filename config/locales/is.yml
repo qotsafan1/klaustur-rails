@@ -23,5 +23,11 @@ is:
   nav:
     news: "FRÉTTIR"
     registration: "SKRÁNING"
+    registered: "KEPPENDUR"
     results: "ÚRSLIT"
     visitor: "ÁHORFENDUR"
+  clock:
+    days: "dagar"
+    hours: "klukkutímar"
+    minutes: "mínútur"
+    seconds: "sekúndur"

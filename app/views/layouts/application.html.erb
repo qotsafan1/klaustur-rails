@@ -13,29 +13,32 @@
       <div class="flex-item-1">
         <%= link_to image_tag("greyBigLogo.jpg", class: "logo"), "/" %>
       </div>
-      <div class="flex-item-1 flex-child-row flex-align-center sections">
-        <h4><%= link_to((I18n.t "nav.news"), "/") %></h4>
+      <div class="flex-item-1 flex-child-column flex-align-center flex-justify-center sections">
+        <h4><%= link_to((I18n.t "nav.news"), "/"+I18n.locale.to_s+"/") %></h4>
       </div>
-      <div class="flex-item-1 flex-child-row flex-align-center sections">
-        <h4><%= link_to((I18n.t "nav.registration"), "signup") %></h4>
+      <div class="flex-item-1 flex-child-column flex-align-center flex-justify-center sections">
+        <h4><%= link_to((I18n.t "nav.registration"), "/"+I18n.locale.to_s+"/signup") %></h4>
       </div>
-      <div class="flex-item-1 flex-child-row flex-align-center sections">
+      <div class="flex-item-1 flex-child-column flex-align-center flex-justify-center sections">
+        <h4><%= link_to((I18n.t "nav.registered"), "/"+I18n.locale.to_s+"/registered") %></h4>
+      </div>
+      <div class="flex-item-1 flex-child-column flex-align-center flex-justify-center sections">
         <h4><%= link_to((I18n.t "nav.visitor"), "/") %></h4>
       </div>
-      <div class="flex-item-1 flex-child-row flex-align-center sections">
+      <div class="flex-item-1 flex-child-column flex-align-center flex-justify-center sections">
         <h4><%= link_to((I18n.t "nav.results"), "/results") %></h4>
       </div>
       <div class="flex-item-1 flex-child-row">
         <div class="flex-item-1 flex-child-row flex-align-center flex-justify-center">
           <%= link_to image_tag("social/fb.gif", size: "20x20"), "https://www.facebook.com/klausturoffroadchallenge", target: "_blank", class:"sections"%>
         </div>
-        <div class="flex-item-1 flex-child-row flex-align-center flex-justify-center">
+        <div class="flex-item-1 flex-child-column flex-align-center flex-justify-center">
           <%= link_to image_tag("social/twitter.png", size: "20x20"), "https://www.twitter.com/klausturoffroad", target: "_blank" %>
         </div>
-        <div class="flex-item-1 flex-child-row flex-align-center flex-justify-center">
+        <div class="flex-item-1 flex-child-column flex-align-center flex-justify-center">
           <%= link_to image_tag("social/instagram.png", size: "20x20"), "https://www.instagram.com/klausturoffroad", target: "_blank" %>
         </div>
-        <div class="flex-item-1 flex-child-row flex-align-center flex-justify-center sections">
+        <div class="flex-item-1 flex-child-column flex-align-center flex-justify-center sections">
           <h4><%= I18n.locale.to_s == 'is' ? (link_to "EN", locale: "en") : (link_to "IS", locale: "is") %></h4>
         </div>
       </div>
@@ -47,11 +50,21 @@
       <h1 class="maker-label flex-item-1">Samstarfsaðilar</h1>
       <br>
       <div class="flex-item-1 flex-child-row">
-        <%= link_to image_tag("makers/vik.gif", class: "maker"), "http://www.motocross.is", target: "_blank", class: "flex-item-1 flex-child-row flex-justify-center flex-align-center" %>
-        <%= link_to image_tag("makers/msi-hvit.JPG", class: "maker"), "http://www.msisport.is", target: "_blank", class: "flex-item-1 flex-child-row flex-justify-center flex-align-center" %>
-        <%= link_to image_tag("makers/kfc.png", class: "maker"), "http://www.kfc.is", target: "_blank", class: "flex-item-1 flex-child-row flex-justify-center flex-align-center" %>
-        <%= link_to image_tag("makers/snaeland.jpg", class: "maker"), "http://www.snaelandvideo.is", target: "_blank", class: "flex-item-1 flex-child-row flex-justify-center flex-align-center" %>
-        <%= link_to image_tag("makers/systrakaffi.png", class: "maker"), "http://www.systrakaffi.is", target: "_blank", class: "flex-item-1 flex-child-row flex-justify-center flex-align-center" %>
+        <div class="flex-item-1 flex-child-column flex-align-center">
+          <%= link_to image_tag("makers/vik.gif", class: "maker"), "http://www.motocross.is", target: "_blank" %>
+        </div>
+        <div class="flex-item-1 flex-child-column flex-align-center">
+            <%= link_to image_tag("makers/msi-hvit.JPG", class: "maker"), "http://www.msisport.is", target: "_blank" %>
+        </div>
+        <div class="flex-item-1 flex-child-column flex-align-center">
+            <%= link_to image_tag("makers/kfc.png", class: "maker"), "http://www.kfc.is", target: "_blank" %>
+        </div>
+        <div class="flex-item-1 flex-child-column flex-align-center">
+            <%= link_to image_tag("makers/snaeland.jpg", class: "maker"), "http://www.snaelandvideo.is", target: "_blank" %>
+        </div>
+        <div class="flex-item-1 flex-child-column flex-align-center">
+            <%= link_to image_tag("makers/systrakaffi.png", class: "maker"), "http://www.systrakaffi.is", target: "_blank" %>
+        </div>
       </div>
     </div>
   </body>
