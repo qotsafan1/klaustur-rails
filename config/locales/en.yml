@@ -29,3 +29,8 @@ en:
     hours: "hours"
     minutes: "minutes"
     seconds: "seconds"
+  race:
+    starts: "Race starts in"
+    sponsors: Sponsors
+  groups:
+    title: "These are the groups in comp"

@@ -3,9 +3,9 @@
   <div class="flex-child-row">
     <div class="flex-item-1  flex-child-column flex-align-center"><b>Sæti</b></div>
     <div class="flex-item-5"><b>Keppendur</b></div>
-    <div class="flex-item-4 flex-child-column flex-align-center"><b>Flokkur</b></div>
-    <div class="flex-item-4 flex-child-column flex-align-center"><b>Heildartími</b></div>
-    <div class="flex-item-1 flex-child-column flex-align-center"><b>Hringir</b></div>
+    <div class="flex-item-4 flex-child-column flex-align-center visible-sm visible-md visible-lg"><b>Flokkur</b></div>
+    <div class="flex-item-4 flex-child-column flex-align-center visible-sm visible-md visible-lg"><b>Heildartími</b></div>
+    <div class="flex-item-1 flex-child-column flex-align-center visible-sm visible-md visible-lg"><b>Hringir</b></div>
   </div>
 
   <div class="flex-child-column flex-justify-center">
@@ -17,15 +17,26 @@
         <div class="flex-item-1 flex-child-row">
           <div class="flex-item-1 flex-child-column flex-align-center counting-place"><%= counter %></div>
           <div class="flex-item-5"><%= competitor.name %></div>
-          <div class="flex-item-4 flex-child-column flex-align-center"><%= competitor.group.name %></div>
-          <div class="flex-item-4 flex-child-column flex-align-center"><%= competitor.total_time.strftime("%H:%M:%S") %></div>
-          <div class="flex-item-1 flex-child-column flex-align-center"><%= competitor.laps %></div>
+          <div class="flex-item-4 flex-child-column flex-align-center visible-sm visible-md visible-lg"><%= competitor.group.name %></div>
+          <div class="flex-item-4 flex-child-column flex-align-center visible-sm visible-md visible-lg"><%= competitor.total_time.strftime("%H:%M:%S") %></div>
+          <div class="flex-item-1 flex-child-column flex-align-center visible-sm visible-md visible-lg"><%= competitor.laps %></div>
         </div>
 
-        <div class="flex-item-1 flex-child-column laptimes" style="display:none">
-          <% competitor.laptimes.each do |lap| %>
+        <div class="flex-item-1 flex-child-row laptimes" style="display:none">
+          <div class="flex-child-column flex-justify-center">
+            <% competitor.laptimes.each do |lap| %>
             <div class="flex-item-1"><b><%= lap.lap_number %>.</b> <%= lap.laptime %></div>
-          <% end %>
+            <% end %>
+          </div>
+          <div class="flex-child-column visible-xs flex-justify-center">
+            <div class="flex-item-1 "><b>Flokkur</b></div>
+            <div class="flex-item-1"><%= competitor.group.name %></div>
+            <div class="flex-item-1"><b>Heildartími</b></div>
+            <div class="flex-item-1"><%= competitor.total_time.strftime("%H:%M:%S") %></div>
+            <div class="flex-item-1"><b>Hringir</b></div>
+            <div class="flex-item-1"><%= competitor.laps %></div>
+
+          </div>
         </div>
       </div>
     <%

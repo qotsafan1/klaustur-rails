@@ -72,10 +72,32 @@ body {
   flex: 6;
 }
 
-.top-nav-bar {
-  height: 65px;
+.navbar {
   background-color: #505050;
+  border-radius: 0px;
   border-style: none;
+  margin-bottom: 0px;
+
+  .logo {
+    margin-right: 10px;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    line-height: 35px;
+  }
+  .navbar-left {
+    a {
+      padding: 5px 5px 5px 5px;
+      margin-right: 10px;
+    }
+  }
+
+  .navbar-right {
+    .lang {
+      padding: 0 5px;
+    }
+  }
 }
 
 .sections
@@ -98,8 +120,7 @@ hr {
    border-width: 3px;
    margin-top: 20px;
    margin-bottom: 20px;
-   border: 0;
-   border-top: 1px solid red;
+   border-top: 10px solid red;
    height: 0;
 }
 
@@ -117,6 +138,9 @@ div.countdown
 
 div#samstarfsadilar
 {
+  h2 {
+    color:white;
+  }
    background-color: #505050;
    h1 {
      padding-left: 10px;
@@ -129,12 +153,25 @@ div#samstarfsadilar
   flex:1;
 }
 
-.signup {
-  padding-top: 30px;
+.news {
+  padding-top: 70px;
+}
+
+.info {
+  padding-top: 70px;
+
+  .about {
+    p {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    margin-bottom: 25px;
+  }
 }
 
 .results {
-  padding: 40px 20px 40px 20px;
+  padding: 70px 20px 40px 20px;
 }
 
 #registrationClock {
@@ -150,10 +187,6 @@ div#samstarfsadilar
   .clock {
     min-width: 200px;
   }
-}
-
-h2 {
-  color:white;
 }
 
 .background-home {
@@ -174,7 +207,7 @@ h2 {
   .laptimes {
     background-color: white;
     color: black;
-    padding: 5px 15px 15px 50px;
+    padding: 5px 5px 5px 50px;
   }
 }
 
@@ -184,4 +217,24 @@ h2 {
 
 .video-section {
   margin-top: 100vh;
+}
+
+.article {
+  margin-bottom: 20px;
+}
+
+@media (max-width 767px) {
+  div#samstarfsadilar {
+    .makers-line {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width:650px) {
+  div#samstarfsadilar {
+    .makers-line {
+      flex-direction: column;
+    }
+  }
 }

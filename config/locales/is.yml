@@ -29,6 +29,11 @@ is:
     hours: "klukkutímar"
     minutes: "mínútur"
     seconds: "sekúndur"
+  race:
+    starts: "Keppni hefst eftir"
+    sponsors: "Samstarfsaðilar"
+  groups:
+    title: "Eftirfarandi flokkar eru í boði í Klaustur Off-Road Challenge."
   time:
    formats:
      long: "%Y-%m-%d %H:%M:%S"

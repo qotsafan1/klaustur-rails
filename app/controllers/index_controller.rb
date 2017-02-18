@@ -12,6 +12,7 @@ class IndexController < ApplicationController
   end
 
   def info
-    @groups = Group.all
+    @info = Information.first
+    @groups = Group.where(hide: false).order(:priority)
   end
 end
