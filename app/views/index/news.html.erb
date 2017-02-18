@@ -1,0 +1,12 @@
+<div class="container signup">
+  <% @articles.each do |article| %>
+    <h3><%= article.label_is %></h3>
+    <p style="white-space: pre-wrap;"><%= article.body_is %></p>
+    <% if (article.image?) %>
+      <img src="<%= article.image %>" alt="">
+    <% end %>
+    <% if (article.youtube?) %>
+      <iframe width="355" height="200" src="https://www.youtube.com/embed/<%= article.youtube %>" frameborder="0" allowfullscreen></iframe>
+    <% end %>
+  <% end %>
+</div>

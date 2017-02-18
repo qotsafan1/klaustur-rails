@@ -22,10 +22,8 @@
 en:
   nav:
     news: "NEWS"
-    registration: "REGISTRATION"
-    registered: "REGISTERED"
+    info: "INFO"
     results: "RESULTS"
-    visitor: "VISITOR INFO"
   clock:
     days: "days"
     hours: "hours"

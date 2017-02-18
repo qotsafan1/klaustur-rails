@@ -14,16 +14,10 @@
         <%= link_to image_tag("greyBigLogo.jpg", class: "logo"), "/" %>
       </div>
       <div class="flex-item-1 flex-child-column flex-align-center flex-justify-center sections">
-        <h4><%= link_to((I18n.t "nav.news"), "/"+I18n.locale.to_s+"/") %></h4>
+        <h4><%= link_to((I18n.t "nav.news"), "/"+I18n.locale.to_s+"/news") %></h4>
       </div>
       <div class="flex-item-1 flex-child-column flex-align-center flex-justify-center sections">
-        <h4><%= link_to((I18n.t "nav.registration"), "/"+I18n.locale.to_s+"/signup") %></h4>
-      </div>
-      <div class="flex-item-1 flex-child-column flex-align-center flex-justify-center sections">
-        <h4><%= link_to((I18n.t "nav.registered"), "/"+I18n.locale.to_s+"/registered") %></h4>
-      </div>
-      <div class="flex-item-1 flex-child-column flex-align-center flex-justify-center sections">
-        <h4><%= link_to((I18n.t "nav.visitor"), "/") %></h4>
+        <h4><%= link_to((I18n.t "nav.info"), "/"+I18n.locale.to_s+"/info") %></h4>
       </div>
       <div class="flex-item-1 flex-child-column flex-align-center flex-justify-center sections">
         <h4><%= link_to((I18n.t "nav.results"), "/results") %></h4>

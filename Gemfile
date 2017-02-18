@@ -37,6 +37,10 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 gem "font-awesome-rails"
 
+# Active admin
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

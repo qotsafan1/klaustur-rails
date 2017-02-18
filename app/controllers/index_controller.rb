@@ -2,8 +2,8 @@ class IndexController < ApplicationController
   def index
   end
 
-  def signup
-    @groups = Group.all
+  def news
+    @articles = Article.all
   end
 
   def results
@@ -11,9 +11,7 @@ class IndexController < ApplicationController
     @competitors = Competitor.all
   end
 
-  def history
-  end
-
-  def registered
+  def info
+    @groups = Group.all
   end
 end
