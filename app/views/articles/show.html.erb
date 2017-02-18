@@ -1,34 +1,26 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Label is:</strong>
-  <%= @article.label_is %>
-</p>
-
-<p>
-  <strong>Label en:</strong>
-  <%= @article.label_en %>
-</p>
-
-<p>
-  <strong>Body is:</strong>
-  <%= @article.body_is %>
-</p>
-
-<p>
-  <strong>Body en:</strong>
-  <%= @article.body_en %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @article.image %>
-</p>
-
-<p>
-  <strong>Youtube:</strong>
-  <%= @article.youtube %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<div class="container news">
+  <div class="flex-child-column">
+      <div class="flex-item-1 flex-child-column">
+        <div class="flex-item-1 article">
+          <h2 class="flex-item-1">
+            <%= I18n.locale.to_s == 'is' ? @article.label_is : @article.label_en %>
+          </h2>
+          <p style="white-space: pre-wrap;"><%= I18n.locale.to_s == 'is' ? @article.body_is : @article.body_en %></p>
+        </div>
+        <% if (@article.image?) %>
+        <div class="flex-item-1 article">
+          <div class="flex-child-column flex-align-center">
+            <img src="<%= @article.image %>" alt="" class="img-responsive">
+          </div>
+        </div>
+        <% end %>
+        <% if (@article.youtube?) %>
+        <div class="flex-item-1 article">
+          <div class="flex-child-column flex-align-center embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= @article.youtube %>"></iframe>
+          </div>
+        </div>
+        <% end %>
+      </div>
+  </div>
+</div>

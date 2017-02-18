@@ -3,7 +3,9 @@
     <% @articles.each do |article| %>
       <div class="flex-item-1 flex-child-column">
         <div class="flex-item-1 article">
-          <h2 class="flex-item-1"><%= I18n.locale.to_s == 'is' ? article.label_is : article.label_en %></h2>
+          <h2 class="flex-item-1">
+            <%= link_to((I18n.locale.to_s == 'is' ? article.label_is : article.label_en), article_path(article)) %>
+          </h2>
           <p style="white-space: pre-wrap;"><%= I18n.locale.to_s == 'is' ? article.body_is : article.body_en %></p>
         </div>
         <% if (article.image?) %>

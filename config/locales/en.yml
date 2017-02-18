@@ -31,6 +31,12 @@ en:
     seconds: "seconds"
   race:
     starts: "Race starts in"
-    sponsors: Sponsors
+    sponsors: "Sponsors"
+    title: "The race"
+    rules: "Please advise"
   groups:
     title: "These are the groups in comp"
+    participants: "participants"
+    participant: "participant"
+    bikes: "bikes"
+    price: "Price for %{prices} place"

@@ -23,15 +23,11 @@
       </div>
     </div>
     <div class="flex-child-row flex-wrap">
-      <div class="flex-item-1 flex-child-column flex-align-center video-container">
-        <iframe width="355" height="200" src="https://www.youtube.com/embed/z9Ul9ccDOqE" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="flex-item-1 flex-child-column flex-align-center video-container">
-        <iframe width="355" height="200" src="https://www.youtube.com/embed/z9Ul9ccDOqE" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="flex-item-1 flex-child-column flex-align-center video-container">
-        <iframe width="355" height="200" src="https://www.youtube.com/embed/z9Ul9ccDOqE" frameborder="0" allowfullscreen></iframe>
-      </div>
+      <% @indexVideos.each do |video| %>
+        <div class="flex-item-1 flex-child-column flex-align-center video-container">
+          <iframe width="355" height="200" src="<%= video.youtube %>" frameborder="0" allowfullscreen></iframe>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

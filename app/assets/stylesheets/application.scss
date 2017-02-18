@@ -168,6 +168,22 @@ div#samstarfsadilar
 
     margin-bottom: 25px;
   }
+
+  .groups {
+    flex-flow: row wrap;
+    .group {
+      padding: 5px;
+      margin: 5px;
+      min-width: 200px;
+      margin-bottom: 5px;
+      p {
+        font-size: 15px;
+      }
+      border: solid 1px red;
+      border-radius: 5px
+
+    }
+  }
 }
 
 .results {
@@ -215,8 +231,9 @@ div#samstarfsadilar
   display: none;
 }
 
-.video-section {
-  margin-top: 100vh;
+.video-container {
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 .article {

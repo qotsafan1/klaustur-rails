@@ -32,8 +32,14 @@ is:
   race:
     starts: "Keppni hefst eftir"
     sponsors: "Samstarfsaðilar"
+    title: "Keppnin"
+    rules: "Vinsamlegast athugið"
   groups:
     title: "Eftirfarandi flokkar eru í boði í Klaustur Off-Road Challenge."
+    participants: "keppendur"
+    participant: "keppandi"
+    bikes: "hjól"
+    price: "Verðlaun fyrir %{prices} sæti"
   time:
    formats:
      long: "%Y-%m-%d %H:%M:%S"

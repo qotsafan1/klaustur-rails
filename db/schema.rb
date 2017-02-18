@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170218173317) do
+ActiveRecord::Schema.define(version: 20170218221450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,12 @@ ActiveRecord::Schema.define(version: 20170218173317) do
     t.integer "priority"
   end
 
+  create_table "index_videos", force: :cascade do |t|
+    t.string   "youtube"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "information", force: :cascade do |t|
     t.text     "info_is"
     t.text     "info_en"
@@ -92,6 +98,13 @@ ActiveRecord::Schema.define(version: 20170218173317) do
     t.integer "lap_number"
     t.text    "laptime"
     t.index ["competitor_id"], name: "index_laptimes_on_competitor_id", using: :btree
+  end
+
+  create_table "rules", force: :cascade do |t|
+    t.string   "rule_is"
+    t.string   "rule_en"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "competitors", "groups"

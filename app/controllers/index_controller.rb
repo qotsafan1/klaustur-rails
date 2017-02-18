@@ -1,5 +1,6 @@
 class IndexController < ApplicationController
   def index
+    @indexVideos = IndexVideo.all
   end
 
   def news
@@ -14,5 +15,6 @@ class IndexController < ApplicationController
   def info
     @info = Information.first
     @groups = Group.where(hide: false).order(:priority)
+    @rules = Rule.all
   end
 end
