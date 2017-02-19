@@ -166,7 +166,7 @@ div#samstarfsadilar
       line-height: 25px;
     }
 
-    margin-bottom: 25px;
+    margin-bottom: 50px;
   }
 
   .groups {
@@ -183,6 +183,7 @@ div#samstarfsadilar
       border-radius: 5px
 
     }
+    margin-bottom: 50px;
   }
 }
 
@@ -212,6 +213,10 @@ div#samstarfsadilar
   background-repeat: no-repeat;
   min-height: 100vh;
   width: auto;
+}
+
+.main {
+  min-height: 100vh;
 }
 
 .competitor {

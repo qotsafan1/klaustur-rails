@@ -18,7 +18,7 @@
         <% if (article.youtube?) %>
         <div class="flex-item-1 article">
           <div class="flex-child-column flex-align-center embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= article.youtube %>"></iframe>
+            <iframe class="embed-responsive-item" src="<%= article.youtube %>"></iframe>
           </div>
         </div>
         <% end %>

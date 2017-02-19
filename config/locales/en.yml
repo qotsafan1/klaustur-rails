@@ -40,3 +40,9 @@ en:
     participant: "participant"
     bikes: "bikes"
     price: "Price for %{prices} place"
+  results:
+    place: "Place"
+    participants: "Participants"
+    group: "Group"
+    time: "Total time"
+    laps: "Laps"

@@ -25,7 +25,9 @@
   <h2 class=""><%= I18n.t "race.rules" %></h2>
   <div class="rules flex-child-column">
     <% @rules.each do |rule| %>
-      <h4>* <%= I18n.locale.to_s == 'is' ? rule.rule_is : rule.rule_en %></h4>
+      <div class="container">
+        <h4><%= I18n.locale.to_s == 'is' ? rule.rule_is : rule.rule_en %></h4>
+      </div>
     <% end %>
   </div>
 </div>

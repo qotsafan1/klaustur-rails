@@ -43,6 +43,12 @@ is:
   time:
    formats:
      long: "%Y-%m-%d %H:%M:%S"
+  results:
+    place: "Sæti"
+    participants: "Keppendur"
+    group: "Flokkur"
+    time: "Heildartími"
+    laps: "Hringir"
   active_admin:
     dashboard: Dashboard
     dashboard_welcome:
@@ -167,6 +173,9 @@ is:
         sign_in_with_omniauth_provider: "Sign in with %{provider}"
         resend_unlock_instructions: "Resend unlock instructions"
         resend_confirmation_instructions: "Resend confirmation instructions"
+      sessions:
+        admin_user:
+          signed_in: "You have been signed in"
     unsupported_browser:
       headline: "Please note that ActiveAdmin no longer supports Internet Explorer versions 8 or less."
       recommendation: "We recommend upgrading to the latest <a href=\"http://windows.microsoft.com/ie\">Internet Explorer</a>, <a href=\"https://chrome.google.com/\">Google Chrome</a>, or <a href=\"https://mozilla.org/firefox/\">Firefox</a>."
