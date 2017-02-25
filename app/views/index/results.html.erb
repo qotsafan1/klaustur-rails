@@ -32,7 +32,7 @@
             <div class="flex-item-1"><b><%= lap.lap_number %>.</b> <%= lap.laptime %></div>
             <% end %>
           </div>
-          <div class="flex-child-column visible-xs flex-justify-center">
+          <div class="flex-child-column visible-xs flex-justify-center small-results-info">
             <div class="flex-item-1 "><b><%= I18n.t "results.group" %></b></div>
             <div class="flex-item-1"><%= I18n.locale.to_s == 'is' ? competitor.group.name : competitor.group.name_en %></div>
             <div class="flex-item-1"><b><%= I18n.t "results.time" %></b></div>

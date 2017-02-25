@@ -213,6 +213,11 @@ div#samstarfsadilar
   background-repeat: no-repeat;
   min-height: 100vh;
   width: auto;
+  padding-top: 60px;
+
+  h2 {
+    color: white;
+  }
 }
 
 .main {
@@ -243,6 +248,10 @@ div#samstarfsadilar
 
 .article {
   margin-bottom: 20px;
+}
+
+.small-results-info {
+  padding-left: 15px;
 }
 
 @media (max-width 767px) {
