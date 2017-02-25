@@ -98,6 +98,9 @@ body {
       padding: 0 5px;
     }
   }
+  .navbar-collapse {
+    max-height: 400px;
+  }
 }
 
 .sections
@@ -155,6 +158,10 @@ div#samstarfsadilar
 
 .news {
   padding-top: 70px;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .info {
@@ -254,6 +261,19 @@ div#samstarfsadilar
   padding-left: 15px;
 }
 
+.children {
+  padding-top: 60px;
+
+  h2 {
+    color: red;
+  }
+
+  .small-gap {
+    margin-bottom: 1px;
+
+  }
+}
+
 @media (max-width 767px) {
   div#samstarfsadilar {
     .makers-line {
@@ -267,5 +287,8 @@ div#samstarfsadilar
     .makers-line {
       flex-direction: column;
     }
+  }
+  .change-on-mobile {
+    flex-direction: column;
   }
 }

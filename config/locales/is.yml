@@ -24,6 +24,7 @@ is:
     news: "FRÉTTIR"
     info: "UPPLÝSINGAR"
     results: "ÚRSLIT"
+    children: "BARNAKEPPNI"
   clock:
     days: "dagar"
     hours: "klukkutímar"
@@ -49,6 +50,35 @@ is:
     group: "Flokkur"
     time: "Heildartími"
     laps: "Hringir"
+  children:
+    title: "Barnakeppni"
+    header:
+      group: "Flokkar (árið gildir):"
+      bikes: "Hjólastærðir:"
+      responsability: "Öll börn eru á ábyrgð foreldra."
+      timetable: "Dagskrá:"
+      registration: "Skráning á guggi@ernir.is og á staðnum."
+    group:
+      younger: "8-9 ára"
+      older: "10-11 ára"
+      oldest: "12-13 ára"
+    bikes:
+      two: "50 - 125 cc. 2-stroke"
+      four: "50 - 150 cc. 4-stroke"
+    timetable:
+      arrival: "Mæting 9:00"
+      test: "Prufuhringur 9:20"
+      start: "Keppni hefst 10:00"
+      finish: "Útflöggun 10:30"
+      prizes: "Verðlaun"
+
+  devise:
+    sessions:
+      admin_user:
+        signed_in: "You have been signed in"
+    failure:
+      admin_user:
+        unauthenticated: "You have to sign in"
   active_admin:
     dashboard: Dashboard
     dashboard_welcome:
@@ -173,9 +203,7 @@ is:
         sign_in_with_omniauth_provider: "Sign in with %{provider}"
         resend_unlock_instructions: "Resend unlock instructions"
         resend_confirmation_instructions: "Resend confirmation instructions"
-      sessions:
-        admin_user:
-          signed_in: "You have been signed in"
+
     unsupported_browser:
       headline: "Please note that ActiveAdmin no longer supports Internet Explorer versions 8 or less."
       recommendation: "We recommend upgrading to the latest <a href=\"http://windows.microsoft.com/ie\">Internet Explorer</a>, <a href=\"https://chrome.google.com/\">Google Chrome</a>, or <a href=\"https://mozilla.org/firefox/\">Firefox</a>."

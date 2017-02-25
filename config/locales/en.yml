@@ -24,6 +24,7 @@ en:
     news: "NEWS"
     info: "INFO"
     results: "RESULTS"
+    children: "KIDS"
   clock:
     days: "days"
     hours: "hours"
@@ -46,3 +47,24 @@ en:
     group: "Group"
     time: "Total time"
     laps: "Laps"
+  children:
+    title: "Youth competition"
+    header:
+      group: "Groups (the year applies):"
+      bikes: "Bike sizes"
+      responsability: "All children are parents responsability."
+      timetable: "Timetable:"
+      registration: "Registration on guggi@ernir.is and locally."
+    group:
+      younger: "8-9 years old"
+      older: "10-11 years old"
+      oldest: "12-13 years old"
+    bikes:
+      two: "50 - 125 cc. 2-stroke"
+      four: "50 - 150 cc. 4-stroke"
+    timetable:
+      arrival: "Arrival 9:00"
+      test: "Test circle 9:20"
+      start: "Starts 10:00"
+      finish: "Finish 10:30"
+      prizes: "Prize" 

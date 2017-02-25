@@ -17,4 +17,7 @@ class IndexController < ApplicationController
     @groups = Group.where(hide: false).order(:priority)
     @rules = Rule.all
   end
+
+  def children
+  end
 end

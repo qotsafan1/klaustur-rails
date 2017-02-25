@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     get '/news', to: 'index#news'
     get '/results', to: 'index#results'
     get '/info', to: 'index#info'
+    get '/children', to: 'index#children'
     get '/articles/:id', to: 'articles#show', as: 'article'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
