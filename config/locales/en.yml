@@ -32,11 +32,11 @@ en:
     seconds: "seconds"
   race:
     starts: "Race starts in"
-    sponsors: "Sponsors"
+    sponsors: "Associates"
     title: "The race"
-    rules: "Please advise"
+    rules: "Please note"
   groups:
-    title: "These are the groups in comp"
+    title: "These are the available groups in the event"
     participants: "participants"
     participant: "participant"
     bikes: "bikes"
@@ -48,13 +48,13 @@ en:
     time: "Total time"
     laps: "Laps"
   children:
-    title: "Youth competition"
+    title: "Kids event"
     header:
       group: "Groups (the year applies):"
       bikes: "Bike sizes"
       responsability: "All children are parents responsability."
       timetable: "Timetable:"
-      registration: "Registration on guggi@ernir.is and locally."
+      registration: "Registration on guggi@ernir.is and on site."
     group:
       younger: "8-9 years old"
       older: "10-11 years old"
@@ -64,7 +64,7 @@ en:
       four: "50 - 150 cc. 4-stroke"
     timetable:
       arrival: "Arrival 9:00"
-      test: "Test circle 9:20"
-      start: "Starts 10:00"
+      test: "Sighting lap 9:20"
+      start: "Start 10:00"
       finish: "Finish 10:30"
-      prizes: "Prize" 
+      prizes: "Awards"

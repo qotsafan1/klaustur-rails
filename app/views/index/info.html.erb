@@ -1,7 +1,7 @@
 <div class="container info">
   <h2 class=""><%= I18n.t "race.title" %></h2>
   <div class="about">
-    <p style="white-space: pre-wrap;"><%= I18n.locale.to_s == 'is' ? @info.info_is : @info.info_en %></p>
+    <p style="white-space: pre-wrap;"><%= I18n.locale.to_s == 'is' ? @info.info_is.html_safe : @info.info_en.html_safe %></p>
   </div>
 
   <h2 class=""><%= I18n.t "groups.title" %></h2>

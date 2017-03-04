@@ -4,7 +4,7 @@ class IndexController < ApplicationController
   end
 
   def news
-    @articles = Article.all
+    @articles = Article.order('articles.updated_at DESC').all
   end
 
   def results
