@@ -19,5 +19,6 @@ class IndexController < ApplicationController
   end
 
   def children
+    @info = Kid.first
   end
 end

@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ $screen-md-min: 900px !default;
+
+ $grid-float-breakpoint: $screen-md-min;
+ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
@@ -158,6 +162,12 @@ div#samstarfsadilar
 
 .news {
   padding-top: 70px;
+  max-width: 950px;
+
+  p {
+    font-size: 18px;
+    line-height: 25px;
+  }
 
   a {
     text-decoration: none;
@@ -169,7 +179,7 @@ div#samstarfsadilar
 
   .about {
     p {
-      font-size: 20px;
+      font-size: 18px;
       line-height: 25px;
     }
 
@@ -239,11 +249,13 @@ div#samstarfsadilar
 }
 
 .competitor {
-  font-size: 20px;
+  font-size: 18px;
   background-color: #505050;
   color: white;
   margin: 0.5px;
   padding: 5px;
+  cursor: pointer;
+  cursor: hand;
   .laptimes {
     background-color: white;
     color: black;
@@ -270,6 +282,11 @@ div#samstarfsadilar
 
 .children {
   padding-top: 60px;
+
+  p {
+    font-size: 18px;
+    line-height: 25px;
+  }
 
   h2 {
     color: red;

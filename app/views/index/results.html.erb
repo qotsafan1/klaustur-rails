@@ -1,4 +1,4 @@
-<div class="results">
+<div class="results container">
   <% if (I18n.locale.to_s == 'is') %>
     <%= select_tag 'groups', options_for_select(@groups.collect{ |u| [u.name, u.name] }), :prompt => "Allir flokkar", :class => "form-control" %>
   <% else %>
