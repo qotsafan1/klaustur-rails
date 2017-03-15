@@ -6,7 +6,7 @@
           <h2 class="flex-item-1">
             <%= link_to((I18n.locale.to_s == 'is' ? article.label_is : article.label_en), article_path(article)) %>
           </h2>
-          <p style="white-space: pre-wrap;"><%= I18n.locale.to_s == 'is' ? article.body_is : article.body_en %></p>
+          <p style="white-space: pre-wrap;"><%= I18n.locale.to_s == 'is' ? article.body_is.html_safe : article.body_en.html_safe %></p>
         </div>
         <% if (article.image?) %>
         <div class="flex-item-1 article">
