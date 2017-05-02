@@ -22,7 +22,7 @@
           <div class="flex-item-1 flex-child-column flex-align-center counting-place"><%= counter %></div>
           <div class="flex-item-5"><%= competitor.name %></div>
           <div class="flex-item-4 flex-child-column flex-align-center visible-sm visible-md visible-lg"><%= I18n.locale.to_s == 'is' ? competitor.group.name : competitor.group.name_en %></div>
-          <div class="flex-item-4 flex-child-column flex-align-center visible-sm visible-md visible-lg"><%= competitor.total_time.strftime("%H:%M:%S") %></div>
+          <div class="flex-item-4 flex-child-column flex-align-center visible-sm visible-md visible-lg"><%= competitor.total_time.nil? ? '00:00:00' : competitor.total_time.strftime("%H:%M:%S") %></div>
           <div class="flex-item-1 flex-child-column flex-align-center visible-sm visible-md visible-lg"><%= competitor.laps %></div>
         </div>
 
@@ -36,7 +36,7 @@
             <div class="flex-item-1 "><b><%= I18n.t "results.group" %></b></div>
             <div class="flex-item-1"><%= I18n.locale.to_s == 'is' ? competitor.group.name : competitor.group.name_en %></div>
             <div class="flex-item-1"><b><%= I18n.t "results.time" %></b></div>
-            <div class="flex-item-1"><%= competitor.total_time.strftime("%H:%M:%S") %></div>
+            <div class="flex-item-1"><%= competitor.total_time.nil? ? '00:00:00' : competitor.total_time.strftime("%H:%M:%S") %></div>
             <div class="flex-item-1"><b><%= I18n.t "results.laps" %></b></div>
             <div class="flex-item-1"><%= competitor.laps %></div>
 
