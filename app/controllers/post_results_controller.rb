@@ -10,7 +10,7 @@ class PostResultsController < ApplicationController
     when 'THRIMENN'
       groupString = "Þrímenningur"
     when 'JARNKALL'
-      groupString = "Járnkall"
+      groupString = "Járnkallinn"
     when 'JARNKELLA'
       groupString = "Járnkellan"
     when 'AFKVAEMA'
