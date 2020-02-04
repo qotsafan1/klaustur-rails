@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Official Sass port of Bootstrap 2 and 3. http://getbootstrap.com/css/#sass
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 
 gem "font-awesome-rails"
 
